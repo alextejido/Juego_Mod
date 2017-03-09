@@ -5,6 +5,9 @@
  */
 package menu_interfaz;
 
+import SCORE.SCORE_PRINT;
+
+
 /**
  *
  * @author Portatil
@@ -16,6 +19,8 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+        setLocationRelativeTo(null);
+       
     }
 
     /**
@@ -27,75 +32,89 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton3 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
-        jLabel1 = new javax.swing.JLabel();
+        jExit = new javax.swing.JButton();
+        jDosJugadores = new javax.swing.JButton();
+        jUnJugador = new javax.swing.JButton();
+        jScore = new javax.swing.JButton();
+        jSeparatorHorizontal = new javax.swing.JSeparator();
+        jSeparatorVertical = new javax.swing.JSeparator();
+        jLabelMenu = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton3.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("EXIT");
-        jButton3.setBorderPainted(false);
-        jButton3.setContentAreaFilled(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jExit.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
+        jExit.setForeground(new java.awt.Color(255, 255, 255));
+        jExit.setText("EXIT");
+        jExit.setBorderPainted(false);
+        jExit.setContentAreaFilled(false);
+        jExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jExitActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 400, 210));
+        getContentPane().add(jExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 400, 210));
 
-        jButton2.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("2 PLAYER");
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jDosJugadores.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
+        jDosJugadores.setForeground(new java.awt.Color(255, 255, 255));
+        jDosJugadores.setText("2 PLAYER");
+        jDosJugadores.setBorderPainted(false);
+        jDosJugadores.setContentAreaFilled(false);
+        jDosJugadores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jDosJugadoresActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 400, 190));
+        getContentPane().add(jDosJugadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 400, 190));
 
-        jButton1.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("1 PLAYER");
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 190));
+        jUnJugador.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
+        jUnJugador.setForeground(new java.awt.Color(255, 255, 255));
+        jUnJugador.setText("1 PLAYER");
+        jUnJugador.setBorderPainted(false);
+        jUnJugador.setContentAreaFilled(false);
+        getContentPane().add(jUnJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 190));
 
-        jButton4.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("SCORE");
-        jButton4.setBorderPainted(false);
-        jButton4.setContentAreaFilled(false);
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 400, 210));
+        jScore.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
+        jScore.setForeground(new java.awt.Color(255, 255, 255));
+        jScore.setText("BEST SCORE");
+        jScore.setBorderPainted(false);
+        jScore.setContentAreaFilled(false);
+        jScore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jScoreActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 400, 210));
 
-        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 810, 40));
+        jSeparatorHorizontal.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jSeparatorHorizontal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 810, 40));
 
-        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 400));
+        jSeparatorVertical.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(jSeparatorVertical, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 400));
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Cielo estrellado.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 400));
+        jLabelMenu.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Cielo estrellado.png"))); // NOI18N
+        getContentPane().add(jLabelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jExitActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jExitActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jDosJugadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jDosJugadoresActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jDosJugadoresActionPerformed
+
+    private void jScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jScoreActionPerformed
+        // TODO add your handling code here:
+        SCORE_PRINT obj=new SCORE_PRINT();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jScoreActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,12 +152,12 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JButton jDosJugadores;
+    private javax.swing.JButton jExit;
+    private javax.swing.JLabel jLabelMenu;
+    private javax.swing.JButton jScore;
+    private javax.swing.JSeparator jSeparatorHorizontal;
+    private javax.swing.JSeparator jSeparatorVertical;
+    private javax.swing.JButton jUnJugador;
     // End of variables declaration//GEN-END:variables
 }

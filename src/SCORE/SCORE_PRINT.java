@@ -5,6 +5,8 @@
  */
 package SCORE;
 
+import menu_interfaz.Menu;
+
 /**
  *
  * @author Portatil
@@ -16,6 +18,7 @@ public class SCORE_PRINT extends javax.swing.JFrame {
      */
     public SCORE_PRINT() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -27,29 +30,148 @@ public class SCORE_PRINT extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jPrimero = new javax.swing.JLabel();
+        jSegundo = new javax.swing.JLabel();
+        jTercero = new javax.swing.JLabel();
+        jCuarto = new javax.swing.JLabel();
+        jQuinto = new javax.swing.JLabel();
+        jNombre1 = new javax.swing.JLabel();
+        jNombre2 = new javax.swing.JLabel();
+        jNombre3 = new javax.swing.JLabel();
+        jNombre4 = new javax.swing.JLabel();
+        jNombre5 = new javax.swing.JLabel();
+        jScore1 = new javax.swing.JLabel();
+        jScore2 = new javax.swing.JLabel();
+        jScore3 = new javax.swing.JLabel();
+        jScore4 = new javax.swing.JLabel();
+        jScore5 = new javax.swing.JLabel();
+        jRank = new javax.swing.JLabel();
+        jScore0 = new javax.swing.JLabel();
+        jName = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabelScore = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/SCORE.png"))); // NOI18N
+        jPrimero.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jPrimero.setForeground(new java.awt.Color(255, 215, 0));
+        jPrimero.setText("1ST");
+        getContentPane().add(jPrimero, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 80, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jSegundo.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jSegundo.setForeground(new java.awt.Color(192, 192, 192));
+        jSegundo.setText("2ND");
+        getContentPane().add(jSegundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, -1, 30));
+
+        jTercero.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jTercero.setForeground(new java.awt.Color(184, 134, 11));
+        jTercero.setText("3ND");
+        getContentPane().add(jTercero, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 280, -1, 30));
+
+        jCuarto.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jCuarto.setForeground(new java.awt.Color(255, 255, 255));
+        jCuarto.setText("4TH");
+        getContentPane().add(jCuarto, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, -1, 30));
+
+        jQuinto.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jQuinto.setForeground(new java.awt.Color(255, 255, 255));
+        jQuinto.setText("5TH");
+        getContentPane().add(jQuinto, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 380, -1, 30));
+
+        jNombre1.setBackground(new java.awt.Color(255, 255, 255));
+        jNombre1.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jNombre1.setForeground(new java.awt.Color(255, 215, 0));
+        jNombre1.setText("jLabE");
+        getContentPane().add(jNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, 130, 30));
+
+        jNombre2.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jNombre2.setForeground(new java.awt.Color(192, 192, 192));
+        jNombre2.setText("jLabe");
+        getContentPane().add(jNombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, 130, 30));
+
+        jNombre3.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jNombre3.setForeground(new java.awt.Color(184, 134, 11));
+        jNombre3.setText("jLabe");
+        getContentPane().add(jNombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 280, 130, 30));
+
+        jNombre4.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jNombre4.setForeground(new java.awt.Color(255, 255, 255));
+        jNombre4.setText("jLabe");
+        getContentPane().add(jNombre4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 330, 130, 30));
+
+        jNombre5.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jNombre5.setForeground(new java.awt.Color(255, 255, 255));
+        jNombre5.setText("jLabe");
+        getContentPane().add(jNombre5, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 380, 130, 30));
+
+        jScore1.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jScore1.setForeground(new java.awt.Color(255, 215, 0));
+        jScore1.setText("jLab");
+        getContentPane().add(jScore1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, 110, 30));
+
+        jScore2.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jScore2.setForeground(new java.awt.Color(192, 192, 192));
+        jScore2.setText("jLab");
+        getContentPane().add(jScore2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 110, 30));
+
+        jScore3.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jScore3.setForeground(new java.awt.Color(184, 134, 11));
+        jScore3.setText("jLab");
+        getContentPane().add(jScore3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, 110, 30));
+
+        jScore4.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jScore4.setForeground(new java.awt.Color(255, 255, 255));
+        jScore4.setText("jLab");
+        getContentPane().add(jScore4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 110, 30));
+
+        jScore5.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jScore5.setForeground(new java.awt.Color(255, 255, 255));
+        jScore5.setText("jLab");
+        getContentPane().add(jScore5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, 110, 30));
+
+        jRank.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jRank.setForeground(new java.awt.Color(0, 204, 204));
+        jRank.setText("RANK");
+        getContentPane().add(jRank, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 100, 30));
+
+        jScore0.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jScore0.setForeground(new java.awt.Color(51, 204, 255));
+        jScore0.setText("SCORE");
+        getContentPane().add(jScore0, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, 130, 30));
+
+        jName.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
+        jName.setForeground(new java.awt.Color(0, 204, 204));
+        jName.setText("NAME");
+        getContentPane().add(jName, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 130, 100, 30));
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Kongtext", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("<BACK");
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setOpaque(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 130, 40));
+
+        jLabelScore.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/SCORE.png"))); // NOI18N
+        getContentPane().add(jLabelScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       
+        Menu men=new Menu();
+        men.setVisible(true);
+        dispose();
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -87,6 +209,25 @@ public class SCORE_PRINT extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jCuarto;
+    private javax.swing.JLabel jLabelScore;
+    private javax.swing.JLabel jName;
+    private javax.swing.JLabel jNombre1;
+    private javax.swing.JLabel jNombre2;
+    private javax.swing.JLabel jNombre3;
+    private javax.swing.JLabel jNombre4;
+    private javax.swing.JLabel jNombre5;
+    private javax.swing.JLabel jPrimero;
+    private javax.swing.JLabel jQuinto;
+    private javax.swing.JLabel jRank;
+    private javax.swing.JLabel jScore0;
+    private javax.swing.JLabel jScore1;
+    private javax.swing.JLabel jScore2;
+    private javax.swing.JLabel jScore3;
+    private javax.swing.JLabel jScore4;
+    private javax.swing.JLabel jScore5;
+    private javax.swing.JLabel jSegundo;
+    private javax.swing.JLabel jTercero;
     // End of variables declaration//GEN-END:variables
 }

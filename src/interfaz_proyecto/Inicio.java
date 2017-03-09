@@ -5,6 +5,11 @@
  */
 package interfaz_proyecto;
 
+
+
+
+import menu_interfaz.Menu;
+
 /**
  *
  * @author Portatil
@@ -16,6 +21,9 @@ public class Inicio extends javax.swing.JFrame {
      */
     public Inicio() {
         initComponents();
+        setLocationRelativeTo(null);
+       setTitle("War Table Hana");
+       
     }
 
     /**
@@ -27,34 +35,38 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jStart = new javax.swing.JButton();
+        jinicio = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setFont(new java.awt.Font("Franklin Gothic Demi Cond", 1, 48)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Start");
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jStart.setFont(new java.awt.Font("Franklin Gothic Demi Cond", 1, 48)); // NOI18N
+        jStart.setForeground(new java.awt.Color(255, 255, 255));
+        jStart.setText("Start");
+        jStart.setBorderPainted(false);
+        jStart.setContentAreaFilled(false);
+        jStart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jStartActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, 180, 100));
+        getContentPane().add(jStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, 180, 100));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/war_table_hana.PNG"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 900, 490));
+        jinicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/war_table_hana.PNG"))); // NOI18N
+        getContentPane().add(jinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 900, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jStartActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        Menu obj=new Menu();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jStartActionPerformed
 
     /**
      * @param args the command line arguments
@@ -89,10 +101,14 @@ public class Inicio extends javax.swing.JFrame {
                 new Inicio().setVisible(true);
             }
         });
+        
     }
 
+
+
+   
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jStart;
+    private javax.swing.JLabel jinicio;
     // End of variables declaration//GEN-END:variables
 }

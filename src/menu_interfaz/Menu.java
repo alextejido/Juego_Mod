@@ -6,6 +6,7 @@
 package menu_interfaz;
 
 import SCORE.SCORE_PRINT;
+import javax.swing.ImageIcon;
 
 
 /**
@@ -19,8 +20,9 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+        setTitle("War Table Hana");
         setLocationRelativeTo(null);
-       
+        setIconImage(new ImageIcon(getClass().getResource("/imagenes/icono.png")).getImage());
     }
 
     /**
@@ -88,7 +90,7 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(jScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 400, 210));
 
         jSeparatorHorizontal.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jSeparatorHorizontal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 810, 40));
+        getContentPane().add(jSeparatorHorizontal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 800, 40));
 
         jSeparatorVertical.setOrientation(javax.swing.SwingConstants.VERTICAL);
         getContentPane().add(jSeparatorVertical, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 30, 400));

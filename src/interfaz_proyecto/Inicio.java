@@ -8,6 +8,9 @@ package interfaz_proyecto;
 
 
 
+
+
+import javax.swing.ImageIcon;
 import menu_interfaz.Menu;
 
 /**
@@ -23,8 +26,9 @@ public class Inicio extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
        setTitle("War Table Hana");
-       
-    }
+        setIconImage(new ImageIcon(getClass().getResource("/imagenes/icono.png")).getImage());
+        Sonidos.Fondo.loop();
+        }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -40,6 +44,7 @@ public class Inicio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
+        setIconImage(getIconImage());
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -65,7 +70,7 @@ public class Inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
         Menu obj=new Menu();
         obj.setVisible(true);
-        dispose();
+        dispose();        
     }//GEN-LAST:event_jStartActionPerformed
 
     /**

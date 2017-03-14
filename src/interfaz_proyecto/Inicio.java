@@ -28,6 +28,7 @@ public class Inicio extends javax.swing.JFrame {
        setTitle("War Table Hana");
         setIconImage(new ImageIcon(getClass().getResource("/imagenes/icono.png")).getImage());
         Sonidos.Fondo.loop();
+        this.jButton2.setVisible(false);
         }
 
     /**
@@ -40,6 +41,8 @@ public class Inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jStart = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jinicio = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -60,6 +63,24 @@ public class Inicio extends javax.swing.JFrame {
         });
         getContentPane().add(jStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, 180, 100));
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/altavoz.png"))); // NOI18N
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 30, -1));
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/mute.png"))); // NOI18N
+        jButton2.setContentAreaFilled(false);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 30, -1));
+
         jinicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/war_table_hana.PNG"))); // NOI18N
         getContentPane().add(jinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 900, 490));
 
@@ -72,6 +93,20 @@ public class Inicio extends javax.swing.JFrame {
         obj.setVisible(true);
         dispose();        
     }//GEN-LAST:event_jStartActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+         Sonidos.Fondo.play();
+        this.jButton2.setVisible(false);
+        this.jButton1.setVisible(true);         
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Sonidos.Fondo.stop();
+        this.jButton1.setVisible(false);
+        this.jButton2.setVisible(true);        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -113,6 +148,8 @@ public class Inicio extends javax.swing.JFrame {
 
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jStart;
     private javax.swing.JLabel jinicio;
     // End of variables declaration//GEN-END:variables

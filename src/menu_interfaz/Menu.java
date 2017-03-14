@@ -7,6 +7,7 @@ package menu_interfaz;
 
 import SCORE.SCORE_PRINT;
 import javax.swing.ImageIcon;
+import menujugadoresymapa.singlejugador;
 
 
 /**
@@ -75,6 +76,11 @@ public class Menu extends javax.swing.JFrame {
         jUnJugador.setText("1 PLAYER");
         jUnJugador.setBorderPainted(false);
         jUnJugador.setContentAreaFilled(false);
+        jUnJugador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jUnJugadorActionPerformed(evt);
+            }
+        });
         getContentPane().add(jUnJugador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 190));
 
         jScore.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
@@ -117,6 +123,13 @@ public class Menu extends javax.swing.JFrame {
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_jScoreActionPerformed
+
+    private void jUnJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jUnJugadorActionPerformed
+        // TODO add your handling code here:
+         singlejugador jug1=new singlejugador();
+        jug1.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jUnJugadorActionPerformed
 
     /**
      * @param args the command line arguments

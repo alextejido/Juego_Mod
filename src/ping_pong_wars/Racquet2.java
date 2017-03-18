@@ -18,7 +18,7 @@ public class Racquet2 {
     }
     
     public void move() {
-        if (y + ya > 0 && y + ya < game.getHeight()-WIDTH)
+        if (y + ya > 0 && y + ya < game.getHeight()- HEIGHT )
             y = y + ya;
     }
     
@@ -32,9 +32,9 @@ public class Racquet2 {
     
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_UP)
-            ya = -3;
+            ya = -game.speed-1;
         if (e.getKeyCode() == KeyEvent.VK_DOWN)
-            ya = 3;
+            ya = game.speed+1;
     }
     
     public Rectangle getBounds() {

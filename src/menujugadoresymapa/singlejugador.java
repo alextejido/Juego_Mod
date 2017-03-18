@@ -7,7 +7,20 @@ package menujugadoresymapa;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import ping_pong_wars.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.ImageIcon;
+import menu_interfaz.Menu;
+import ping_pong_wars.Game;
+
 
 /**
  *
@@ -19,15 +32,36 @@ public class singlejugador extends javax.swing.JFrame {
      * Creates new form singlejugador
      */
     public singlejugador() {
+        
         initComponents();
         setLocationRelativeTo(null);
         setTitle("War Table Hana");
+      
+        setIconImage(new ImageIcon(getClass().getResource("/imagenes/icono.png")).getImage());
         this.jArena2.setVisible(false);
         this.jArena3.setVisible(false); 
         this.jButton2.setVisible(false);
         this.jButton3.setVisible(false);
     }
-
+    
+    
+public void nombre(){
+      ArrayList nombre=new ArrayList();
+  String nom=jname.getText();
+    
+    nombre.add(nom);
+   String archivo = "nombre.txt";
+        if (!nombre.isEmpty()) {
+            try {
+                ObjectOutputStream ficheroSalida = new ObjectOutputStream(new FileOutputStream(new File(archivo)));
+                ficheroSalida.writeObject(nombre);
+                ficheroSalida.flush();
+                ficheroSalida.close();     
+            }catch(Exception ex){
+                System.out.println("Fallo al guardar en el archivo");
+            }
+        }
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -48,16 +82,17 @@ public class singlejugador extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jAtras = new javax.swing.JButton();
         junplay = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Kongtext", 1, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("1 PLAYER");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 350, 90));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 420, 90));
 
         jname.setFont(new java.awt.Font("Kongtext", 1, 18)); // NOI18N
         jname.setForeground(new java.awt.Color(255, 255, 255));
@@ -70,6 +105,11 @@ public class singlejugador extends javax.swing.JFrame {
         jnombre.setForeground(new java.awt.Color(255, 255, 255));
         jnombre.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jnombre.setOpaque(false);
+        jnombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jnombreActionPerformed(evt);
+            }
+        });
         getContentPane().add(jnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 140, 30));
 
         jarena.setFont(new java.awt.Font("Kongtext", 1, 18)); // NOI18N
@@ -127,6 +167,19 @@ public class singlejugador extends javax.swing.JFrame {
         });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, -1, -1));
 
+        jAtras.setBackground(new java.awt.Color(255, 255, 255));
+        jAtras.setFont(new java.awt.Font("Kongtext", 1, 18)); // NOI18N
+        jAtras.setForeground(new java.awt.Color(255, 255, 255));
+        jAtras.setText("<BACK");
+        jAtras.setBorderPainted(false);
+        jAtras.setContentAreaFilled(false);
+        jAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jAtrasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 130, 40));
+
         junplay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Cielo estrellado.png"))); // NOI18N
         getContentPane().add(junplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -168,15 +221,50 @@ public class singlejugador extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        Game ga=new Game();
-          ga.setVisible(true);
-          
-         dispose();     
+       
+  String []nom=new String[1];
+        nom[0]=jnombre.getText();
+ 
+         
+            try {
+              FileWriter   fichero =new FileWriter("nombre.txt");
+                fichero.write(nom+"\n");
+                fichero.close();   
+                 for(String event: nom) {
+    System.out.println(event);
+}
+            }catch(FileNotFoundException ex){
+                System.out.println("Fallo al guardar en el archivo");
+            } catch (IOException ex) {
+            Logger.getLogger(singlejugador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           /*  FileWriter fw = null;
+            PrintWriter esc = null;
+        try{    
+            fw = new FileWriter("nombre.txt",true);
+            esc = new PrintWriter(fw);
+            esc.append("\n");
+            esc.append(nom[0]);
+        } catch (IOException ex) {
+            System.out.println("erro engadir"+ ex.getMessage());
+        }*/
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void jnombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jnombreActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jnombreActionPerformed
+
+    private void jAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAtrasActionPerformed
+
+        Menu men=new Menu();
+        men.setVisible(true);
+        dispose();
+
+    }//GEN-LAST:event_jAtrasActionPerformed
+
+
     public static void main(String args[]) {
         
         /* Set the Nimbus look and feel */
@@ -214,6 +302,7 @@ public class singlejugador extends javax.swing.JFrame {
     private javax.swing.JLabel jArena1;
     private javax.swing.JLabel jArena2;
     private javax.swing.JLabel jArena3;
+    private javax.swing.JButton jAtras;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

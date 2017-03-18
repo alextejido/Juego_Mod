@@ -14,4 +14,7 @@ import java.applet.AudioClip;
  */
 public class Sonidos {
     public static final AudioClip Fondo= Applet.newAudioClip(Sonidos.class.getResource("/14.wav"));
+    public static final AudioClip Rebote= Applet.newAudioClip(Sonidos.class.getResource("/salto.wav"));
+    public static final AudioClip Gameover= Applet.newAudioClip(Sonidos.class.getResource("/GameOver.wav"));
+    public static final AudioClip Juego= Applet.newAudioClip(Sonidos.class.getResource("/juego.wav"));
 }

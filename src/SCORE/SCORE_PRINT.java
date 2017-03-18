@@ -5,6 +5,11 @@
  */
 package SCORE;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import javax.swing.ImageIcon;
 import menu_interfaz.Menu;
 
@@ -22,6 +27,28 @@ public class SCORE_PRINT extends javax.swing.JFrame {
         setTitle("War Table Hana");
         setLocationRelativeTo(null);
          setIconImage(new ImageIcon(getClass().getResource("/imagenes/icono.png")).getImage());
+         
+    }
+    public void cargaNOM() throws FileNotFoundException, IOException{
+      String cadena;
+       FileReader f = new FileReader("nombres.txt");
+      BufferedReader b = new BufferedReader(f);
+      while((cadena = b.readLine())!=null) {
+          
+          jNombre1.setText(cadena);
+      }
+      b.close();
+}
+
+    public void cargaSCORE() throws FileNotFoundException, IOException{
+        String cadena;
+       FileReader f = new FileReader("nombres.txt");
+      BufferedReader b = new BufferedReader(f);
+      while((cadena = b.readLine())!=null) {
+         
+          jScore0.setText(cadena);
+      }
+      b.close();
     }
 
     /**
@@ -86,52 +113,42 @@ public class SCORE_PRINT extends javax.swing.JFrame {
         jNombre1.setBackground(new java.awt.Color(255, 255, 255));
         jNombre1.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
         jNombre1.setForeground(new java.awt.Color(255, 215, 0));
-        jNombre1.setText("jLabE");
         getContentPane().add(jNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, 130, 30));
 
         jNombre2.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
         jNombre2.setForeground(new java.awt.Color(192, 192, 192));
-        jNombre2.setText("jLabe");
         getContentPane().add(jNombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, 130, 30));
 
         jNombre3.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
         jNombre3.setForeground(new java.awt.Color(184, 134, 11));
-        jNombre3.setText("jLabe");
         getContentPane().add(jNombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 280, 130, 30));
 
         jNombre4.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
         jNombre4.setForeground(new java.awt.Color(255, 255, 255));
-        jNombre4.setText("jLabe");
         getContentPane().add(jNombre4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 330, 130, 30));
 
         jNombre5.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
         jNombre5.setForeground(new java.awt.Color(255, 255, 255));
-        jNombre5.setText("jLabe");
         getContentPane().add(jNombre5, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 380, 130, 30));
 
         jScore1.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
         jScore1.setForeground(new java.awt.Color(255, 215, 0));
-        jScore1.setText("jLab");
         getContentPane().add(jScore1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, 110, 30));
 
         jScore2.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
         jScore2.setForeground(new java.awt.Color(192, 192, 192));
-        jScore2.setText("jLab");
         getContentPane().add(jScore2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 110, 30));
 
         jScore3.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
         jScore3.setForeground(new java.awt.Color(184, 134, 11));
-        jScore3.setText("jLab");
         getContentPane().add(jScore3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, 110, 30));
 
         jScore4.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
         jScore4.setForeground(new java.awt.Color(255, 255, 255));
-        jScore4.setText("jLab");
         getContentPane().add(jScore4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 110, 30));
 
         jScore5.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
         jScore5.setForeground(new java.awt.Color(255, 255, 255));
-        jScore5.setText("jLab");
         getContentPane().add(jScore5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, 110, 30));
 
         jRank.setFont(new java.awt.Font("Kongtext", 1, 24)); // NOI18N
